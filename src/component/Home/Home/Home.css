@@ -1,0 +1,9 @@
+.sideBar_postBar {
+    display: flex;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .sideBar_postBar {
+        display: grid;
+    }
+}

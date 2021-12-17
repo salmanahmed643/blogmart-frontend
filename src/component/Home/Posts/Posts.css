@@ -1,0 +1,33 @@
+.postsSection {
+    flex: 9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: 1rem;
+    margin-right: 0;
+}
+
+
+
+
+@media only screen and (min-width: 991.99px) {
+    .postsSection {
+        flex: 12;
+        margin: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .postsSection {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 575.99px) {
+    .postsSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

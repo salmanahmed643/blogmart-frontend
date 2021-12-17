@@ -1,0 +1,15 @@
+.sittingsSection {
+    display: flex;
+}
+.sittingsWrapper {
+    flex: 9;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .sittingsSection {
+        display: grid;
+    }
+    .sittingsWrapper {
+        flex: 12;
+    }
+}

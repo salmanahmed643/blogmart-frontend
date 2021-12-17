@@ -1,0 +1,91 @@
+.SignInSection {
+    height: calc(100vh - 6rem);
+    background-color: var(--bg_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.signInSignUpTitle {
+    font-size: 4.5rem;
+    color: var(--primary_color);
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+.signInForm {
+    display: flex;
+    flex-direction: column;
+}
+.signInForm label {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+.signInInput {
+    width: 30rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .1rem solid #d7d7d7;
+    transition: all .4s ease;
+}
+.signInInput::placeholder {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    color: rgba(0, 0, 0, .6);
+    font-family: 1.6rem;
+}
+.signInInput:focus {
+    outline: none;
+    border: .1rem solid var(--primary_color);
+}
+
+
+
+
+
+
+.signInButton {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border: none;
+    background-color: var(--primary_color);
+    color: #fff;
+    border-radius: 1rem;
+    font-weight: 500;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.signInButton:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+
+.dontAccount {
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-right: .5rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.signInSignUpButton {
+    background-color: #2980b9;
+    border: none;
+    border-radius: .5rem;
+    transition: all .4s ease;
+}
+.signInSignUpButton:hover {
+    background-color: var(--primary_color);
+}
+
+.signInSignUpButton a {
+    font-size: 1.3rem;
+    color: #fff;
+}

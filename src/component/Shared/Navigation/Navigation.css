@@ -1,0 +1,211 @@
+.navbar {
+    width: 100%;
+    height: 6rem;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, .01);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.navbarLeft {
+    flex: 3;
+}
+.navbarRight {
+    flex: 9;
+    display: flex;
+}
+
+
+
+
+/* navbar left  start */
+.navbarLeft {
+    text-align: center;
+}
+.logo {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, .5);
+}
+/* navbar left end */
+
+
+
+/* navbar right start */
+/* navbar Link */
+.navbarLink {
+    flex: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarLink li {
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, .01);
+    margin-left: .5rem;
+    transition: all .4s ease;
+}
+.navbarLink li:hover {
+    background-color:rgba(0, 0, 0, .02);
+    transform: scale(1.04);
+}
+.navbarLink li a {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+/* navbar right end */
+
+
+
+
+
+
+/* navbarProfile start */
+.navbarProfile {
+    flex: 3 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImg {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid var(--text_color);
+    box-shadow: 4px 5px 9px rgba(0, 0, 0, .3);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.profileImg:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 5px 9px rgba(0, 0, 0, .5);
+    padding: 0;
+    margin: 0;
+}
+
+.searchIcon {
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: var(--text_color);
+    cursor: pointer;
+}
+/* navbarProfile start end */
+
+
+
+
+
+/* navbarSign start */
+.navbarButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.navbarSignIn {
+    background-color: var(--primary_color);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    transition: all .5s ease;
+}
+.navbarSignIn:hover {
+    background-color: #2980b9;
+}
+
+.navbarSignUp {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    font-weight: 500;
+    transition: all .5s ease;
+    background-color: rgba(0, 0, 0, .02);
+    color: var(--primary_color);
+}
+.navbarSignUp:hover {
+    color: #fff;
+    background-color: var(--primary_color);
+}
+/* navbarSign end */
+
+
+
+
+
+
+
+/* responsive button */
+.mobileMenuButton {
+    display: none;
+}
+.navbarMobile {
+    display: flex;
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .navbarLeft {
+        text-align: left;
+        margin-left: 10%;
+    }
+    .navbarCenter, .navbarRight {
+        display: none;
+    }
+
+
+    .navbarLink {
+        display: block;
+        text-align: center;
+    }
+    .navbarLink li {
+        margin-top: 2rem;
+    }
+    .navbarLink li:hover {
+        background-color:rgba(0, 0, 0, .02);
+        transform: scale(1);
+    }
+
+    .navbarProfile {
+        display: grid;
+        text-align: center;
+    }
+
+    .searchIcon {
+        margin: 10px auto;
+    }
+
+
+    /* responsive part */
+    .navbarMobile {
+        display: flex;
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        right: 0;
+        top: 6rem;
+        width: 32rem;
+        height: 100vh;
+    }
+    .mobileMenuButton {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        border-radius: .5rem;
+        color: var(--primary_color);
+        box-shadow: .1rem .3rem .9rem rgba(0, 0, 0, .2);
+    }
+    .mobileMenuButton i {
+        font-size: 2rem;
+    }
+}

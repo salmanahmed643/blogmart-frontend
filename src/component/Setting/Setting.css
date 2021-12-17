@@ -1,0 +1,121 @@
+.settingSection {
+    padding: 2rem;
+}
+
+
+
+.settingTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingUpdateTitle {
+    font-size: 3rem;
+    color: var(--primary_color);
+    text-transform: capitalize;
+}
+.settingDelete {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    text-decoration: underline;
+    text-transform: capitalize;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.settingDelete:hover{
+    color: #c0392b;
+}
+
+
+
+.settingForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePictureTitle {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+    font-weight: 500;
+}
+
+
+
+.settingProfilePicture {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.settingProfilePicture img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.settingPPIcon {
+    margin-left: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--primary_color);
+    color: #fff;
+    padding: .5rem;
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+.settingPPIcon:hover {
+    color: #fff;
+    background-color: #2980b9;
+}
+
+
+
+.settingForm label {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.settingForm input {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid rgba(52, 152, 219, .3);
+    border-radius: 1rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    transition: all .4s ease;
+}
+.settingForm input:focus {
+    outline: none;
+    border-bottom: 1px solid #2980b9;
+}
+
+
+
+.settingUpdateButton {
+    margin: 0 auto;
+    width: 30rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--primary_color);
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.settingUpdateButton:hover {
+    background-color: #2980b9;
+}
+
+
+
+@media only screen and (max-width: 575.99px) {
+    .settingUpdateTitle {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .settingTitle {
+        display: grid;
+    }
+}

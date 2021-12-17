@@ -1,0 +1,74 @@
+.writeSection {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.writeImg {
+    text-align: center;
+}
+.writeImg img {
+    width: 80%;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+
+
+.writeFormGroup {
+    margin-left: 15rem;
+    display: flex;
+    align-items: center;
+}
+.writeFileIcon {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, .07);
+    color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
+
+.writeInputTitle {
+    font-size: 3rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    border: none;
+    padding: 2rem;
+    width: 80%;
+}
+.writeInputTitle:focus {
+    outline: none;
+}
+
+
+.writeTextareaDetails {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+.writePublish {
+    padding: 1rem 2rem;
+    background-color: #3498db;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.writePublish:hover {
+    background-color: #2980b9;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .writeFormGroup {
+        margin-left: 1rem;
+        justify-content: center;
+    }
+}

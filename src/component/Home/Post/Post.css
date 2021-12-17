@@ -1,0 +1,78 @@
+.postSection {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+}
+
+
+
+.postImg img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+
+
+.postCatsDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.postCat {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: .5rem;
+}
+
+.postDate span {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    color: rgba(0, 0, 0, .5);
+}
+
+
+
+
+.postTitle {
+    margin: 20px 0;
+}
+.postTitle h3 {
+    overflow-wrap: anywhere;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: inline-block;
+}
+  
+.postTitle h3::after {
+    content: '';
+    width: 0;
+    height: .1rem;
+    display: block;
+    background: black;
+    transition: all .7s ease;
+}
+  
+.postTitle h3:hover:after {
+    width: 100%;
+}
+
+
+
+.postDesc {
+    margin-top: 10px;
+}
+.postDesc p {
+    font-size: 1.5rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    line-height: 22px;
+    color: var(--text_color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}

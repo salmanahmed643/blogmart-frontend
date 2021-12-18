@@ -1,31 +1,39 @@
 import React from 'react';
-import './Post.css'
-import post_img from '../../../img/post-1.jpg'
+import './Post.css';
+import { Link } from 'react-router-dom';
 
-const Post = () => {
+const Post = ({post}) => {
+    const {title, desc, postPhoto, createdAt,categories, _id} = post;
     return (
         <>
             <div className="postSection">
                 <div className="postImg">
-                    <img src={post_img} alt="" />
+                    {
+                        postPhoto && <img src={postPhoto} alt="" />
+                    }
                 </div>
                 <div className="postInfo">
                     <div className="postCatsDate">
                         <div>
-                            <span className="postCat">Music</span>
-                            <span className="postCat">Life</span>
+                            {
+                                categories.map(category => (
+                                    <span className="postCat">{category.name}</span>
+                                ))
+                            }
                         </div>
                         <div className="postDate">
-                            <span>1 hour ago</span>
+                            <span>{new Date(createdAt).toDateString()}</span>
                         </div>
                     </div>
                     <div className="postTitle">
-                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <Link to={`/post/${_id}`}>
+                            <h3>{title}</h3>
+                        </Link>
                     </div>
 
                     <div className="postDesc">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, inventore assumenda voluptas eius fugit accusamus! Ipsam a, praesentium voluptatem nihil quasi accusamus pariatur maxime repellendus tempore assumenda cupiditate quo inventore omnis sequi reiciendis fugiat quam? Alias assumenda labore fugit doloribus nostrum unde placeat, odio quod, ex pariatur eum ratione. Porro ducimus at placeat quibusdam quaerat optio quae magnam facere veritatis necessitatibus est reiciendis labore eos culpa quam in, ab omnis quos, cupiditate dolorum magni expedita reprehenderit! Ipsa soluta cupiditate dolor exercitationem iste asperiores? Iste asperiores itaque expedita? Voluptatem est quasi odio! Magnam et tempore vero soluta esse modi delectus assumenda!
+                            {desc}
                         </p>
                     </div>
                 </div>

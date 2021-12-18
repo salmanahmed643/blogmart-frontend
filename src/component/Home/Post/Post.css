@@ -71,6 +71,7 @@
     line-height: 22px;
     color: var(--text_color);
     overflow: hidden;
+    overflow-wrap: anywhere;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;

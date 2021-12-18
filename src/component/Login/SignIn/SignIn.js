@@ -7,7 +7,7 @@ import './SignIn.css'
 const SignIn = () => {
     const userRef = useRef();
     const passRef = useRef();
-    const {user, dispatch, isFetching} = useContext(Context)
+    const {dispatch, isFetching} = useContext(Context)
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,8 +23,6 @@ const SignIn = () => {
             dispatch({type: "SIGNIN_FAILURE"});
         }
     }
-
-    console.log(isFetching);
     return (
         <>
             <div className="SignInSection">
@@ -51,6 +49,7 @@ const SignIn = () => {
                     <button
                         type="submit" 
                         className="signInButton"
+                        disabled={isFetching}
                     >Sign in</button>
                 </form>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>

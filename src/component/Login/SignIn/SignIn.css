@@ -54,12 +54,18 @@
     border: none;
     background-color: var(--primary_color);
     color: #fff;
-    border-radius: 1rem;
+    font-size: 1.4rem;
     font-weight: 500;
+    border-radius: 1rem;
     transition: all .4s ease;
     cursor: pointer;
 }
 .signInButton:hover {
+    background-color: #2980b9;
+}
+
+.signInButton:disabled {
+    cursor: not-allowed;
     background-color: #2980b9;
 }
 

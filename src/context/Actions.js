@@ -11,3 +11,8 @@ export const SignInSuccess = user => ({
 export const SingInFailure = () => ({
     type: "SIGNIN_FAILURE"
 });
+
+
+export const SignOut = () => ({
+    type: "SIGNOUT"
+});

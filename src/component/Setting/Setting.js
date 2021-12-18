@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Setting.css';
 import profile_img from '../../img/post-1.jpg';
+import { Context } from '../../context/Context';
 
 const Setting = () => {
+    const {user} = useContext(Context)
     return (
         <>
             <div className="settingSection">
@@ -14,7 +16,9 @@ const Setting = () => {
                     <form className="settingForm">
                         <h4 className="profilePictureTitle">Profile Picture</h4>
                         <div className="settingProfilePicture">
-                            <img src={profile_img} alt="" />
+                            {
+                                user && (<img src={user.profilePic} alt="" />)
+                            }
                             <label htmlFor="fileInput">
                                 <i className="settingPPIcon far fa-user-circle"></i>
                             </label>

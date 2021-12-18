@@ -57,6 +57,14 @@
     font-size: 2rem;
     text-transform: capitalize;
 }
+
+.singOut {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
 /* navbar right end */
 
 
@@ -76,6 +84,7 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+    object-fit: cover;
     border: 1px solid var(--text_color);
     box-shadow: 4px 5px 9px rgba(0, 0, 0, .3);
     transition: all .4s ease;

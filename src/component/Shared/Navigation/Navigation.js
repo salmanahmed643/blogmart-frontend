@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Navigation.css';
 import profile_img from '../../../img/profile.jpg'
 import { Link } from 'react-router-dom';
+import { Context } from '../../../context/Context';
 
 const Navigation = () => {
-    const user = false;
-    const [isMobile, setIsMobile] = useState(false)
+    const {user, dispatch} = useContext(Context);
+    const [isMobile, setIsMobile] = useState(false);
+
+
+    const handleSignOut = () => {
+        dispatch({
+            type: "SIGNOUT"
+        })
+    }
     return (
         <>
             <div className="navbar">
@@ -27,11 +35,11 @@ const Navigation = () => {
                             <li> <Link to="/">about</Link> </li>
                             <li> <Link to="/">contact</Link> </li>
                             <li> <Link to="/write">write</Link> </li>
-                            <li> <Link to="/signin">
+                            <li onClick={handleSignOut} className="singOut">
                                 {
                                     user && "logout"
                                 }
-                            </Link> </li>
+                            </li>
                         </ul>
 
                         {/* navbar profile */}
@@ -39,7 +47,7 @@ const Navigation = () => {
                             {
                                 user ? (
                                     <Link to="settings">
-                                        <img className="profileImg" src={profile_img} alt="" />
+                                        <img className="profileImg" src={user.profilePic} alt="" />
                                     </Link>
                                 ) :
                                 <ul className="navbarButton">

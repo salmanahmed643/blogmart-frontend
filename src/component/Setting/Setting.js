@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import './Setting.css';
-import profile_img from '../../img/post-1.jpg';
 import { Context } from '../../context/Context';
 
 const Setting = () => {

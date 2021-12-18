@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import './Navigation.css';
-import profile_img from '../../../img/profile.jpg'
 import { Link } from 'react-router-dom';
 import { Context } from '../../../context/Context';
 

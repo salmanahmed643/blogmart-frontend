@@ -10,7 +10,10 @@ const Post = ({post}) => {
             <div className="postSection">
                 <div className="postImg">
                     {
-                        postPhoto && <img src={PF + postPhoto} alt="" />
+                        postPhoto && 
+                        <div>
+                            <img src={PF + postPhoto} alt="" />
+                        </div>
                     }
                 </div>
                 <div className="postInfo">

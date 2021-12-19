@@ -64,8 +64,23 @@
     line-height: 3rem;
 }
 
+.postTitleInput {
+    width: 100%;
+    border-radius: 1rem;
+    outline: none;
+    border: .1rem solid rgba(52, 152, 219, .3);
+    padding: 1rem;
+    font-size: 3rem;
+    transition: all .5s ease;
+}
+.postTitleInput:focus {
+    border: .1rem solid rgba(52, 152, 219, .7);
+}
 
-
+.postTextarea {
+    height: 200px;
+    font-size: 1.8rem;
+}
 
 
 .singlePostDesc {
@@ -87,6 +102,25 @@
 
 
 
+.postUpdateButton {
+    width: 30rem;
+    padding: 1rem 0;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: var(--primary_color);
+    color: #fff;
+    border-radius: .5rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.postUpdateButton:hover {
+    background-color: #2980b9;
+}
 
 
 

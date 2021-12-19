@@ -10,13 +10,18 @@ const SinglePost = () => {
     const {user} = useContext(Context)
     const {postId} = useParams();
     const [post, setPost] = useState([]);
+    const [title, setTitle] = useState("");
+    const [desc, setDesc] = useState("");
+    const [updateMode, setUpdateMode] = useState(false);
 
-    const {title, username, createdAt, desc, postPhoto} = post;
+    const {username, createdAt, postPhoto} = post;
 
     useEffect(() => {
         const getPost = async() => {
             const res = await axios.get(`http://localhost:7000/api/posts/${postId}`)
             setPost(res.data);
+            setTitle(res.data.title);
+            setDesc(res.data.desc);
         }
         getPost()
     }, [postId]);
@@ -29,6 +34,15 @@ const SinglePost = () => {
             });
             window.location.replace("/")
         } catch(err) {
+        }
+    };
+
+    const handleUpdate = async (e) => {
+        try{
+            await axios.put(`http://localhost:7000/api/posts/${postId}`, {username: user.username, title, desc})
+            setUpdateMode(false)
+        } catch(err) {
+
         }
     }
 
@@ -52,7 +66,7 @@ const SinglePost = () => {
                             {
                                 username === user?.username && 
                                 <>
-                                    <i className="postEdit far fa-edit"></i>
+                                    <i onClick={() => setUpdateMode(true)} className="postEdit far fa-edit"></i>
                                     <i onClick={handleDelete} className="postDelete far fa-trash-alt"></i>
                                 </>
                             }
@@ -60,13 +74,18 @@ const SinglePost = () => {
                     </div>
                         <span className="singlePostDate">{new Date(createdAt).toDateString()}</span>
 
-                        
-                        <h3 className="singlePostTitle">{title}</h3>
+                        {
+                            updateMode ? <input onChange={e => setTitle(e.target.value)} autoFocus={true} type="text" value={title} className="singlePostTitle postTitleInput" /> :
+                            <h3 className="singlePostTitle">{title}</h3>
+                        }
                     <div className="singlePostDesc">
-                        <p>
-                            {desc}
-                        </p>
+                    {
+                        updateMode ? <textarea onChange={e => setDesc(e.target.value)} value={desc} className="singlePostTitle postTitleInput postTextarea" /> :
+                        <p>{desc}</p>
+                    }
                     </div>
+                    { updateMode &&
+                        <button onClick={handleUpdate} className="postUpdateButton">Update</button>}
                 </div>
             </div> 
         </>

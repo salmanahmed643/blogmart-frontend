@@ -6,6 +6,7 @@ import { Context } from '../../../context/Context';
 const Navigation = () => {
     const {user, dispatch} = useContext(Context);
     const [isMobile, setIsMobile] = useState(false);
+    const PF = "https://secure-headland-36866.herokuapp.com/images/";
 
 
     const handleSignOut = () => {
@@ -46,7 +47,7 @@ const Navigation = () => {
                             {
                                 user ? (
                                     <Link to="settings">
-                                        <img className="profileImg" src={user.profilePic} alt="" />
+                                        <img className="profileImg" src={PF+user.profilePic} alt="" />
                                     </Link>
                                 ) :
                                 <ul className="navbarButton">

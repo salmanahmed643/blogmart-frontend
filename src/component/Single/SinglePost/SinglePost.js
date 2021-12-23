@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../../context/Context';
 
 const SinglePost = () => {
-    const PF = "http://localhost:7000/images/";
+    const PF = "https://secure-headland-36866.herokuapp.com/images/";
     const {user} = useContext(Context)
     const {postId} = useParams();
     const [post, setPost] = useState([]);
@@ -18,7 +18,7 @@ const SinglePost = () => {
 
     useEffect(() => {
         const getPost = async() => {
-            const res = await axios.get(`http://localhost:7000/api/posts/${postId}`)
+            const res = await axios.get(`https://secure-headland-36866.herokuapp.com/api/posts/${postId}`)
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -29,7 +29,7 @@ const SinglePost = () => {
 
     const handleDelete = async() => {
         try{
-            await axios.delete(`http://localhost:7000/api/posts/${postId}`, {
+            await axios.delete(`https://secure-headland-36866.herokuapp.com/api/posts/${postId}`, {
                 data:{username: user.username}
             });
             window.location.replace("/")
@@ -39,7 +39,7 @@ const SinglePost = () => {
 
     const handleUpdate = async (e) => {
         try{
-            await axios.put(`http://localhost:7000/api/posts/${postId}`, {username: user.username, title, desc})
+            await axios.put(`https://secure-headland-36866.herokuapp.com/api/posts/${postId}`, {username: user.username, title, desc})
             setUpdateMode(false)
         } catch(err) {
 

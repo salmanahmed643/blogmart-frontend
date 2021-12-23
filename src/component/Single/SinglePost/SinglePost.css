@@ -1,6 +1,6 @@
 .singlePostSection {
     flex: 9;
-    margin: 2rem;
+    margin: 2rem 2rem 5rem 2rem;
 }
 
 
@@ -63,12 +63,15 @@
     overflow-wrap: anywhere;
     line-height: 3rem;
 }
+.singlePostTitle:hover {
+    text-decoration: underline;
+}
 
 .postTitleInput {
     width: 100%;
     border-radius: 1rem;
     outline: none;
-    border: .1rem solid rgba(52, 152, 219, .3);
+    border: .1rem solid rgba(52, 152, 219, .2);
     padding: 1rem;
     font-size: 3rem;
     transition: all .5s ease;
@@ -132,6 +135,6 @@
 @media only screen and (max-width: 991.99px) {
     .singlePostSection {
         flex: 12;
-        margin: .5rem;
+        margin: 1rem 1rem 5rem 1rem;
     }
 }

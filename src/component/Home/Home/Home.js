@@ -12,7 +12,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchPosts = async() => {
-            const res = await axios.get(`http://localhost:7000/api/posts/${search}`)
+            const res = await axios.get(`https://secure-headland-36866.herokuapp.com/api/posts/${search}`)
             setPosts(res.data)
         }
         fetchPosts()

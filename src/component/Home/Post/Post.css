@@ -51,17 +51,8 @@
     display: inline-block;
 }
   
-.postTitle h3::after {
-    content: '';
-    width: 0;
-    height: .1rem;
-    display: block;
-    background: black;
-    transition: all .7s ease;
-}
-  
-.postTitle h3:hover:after {
-    width: 100%;
+.postSection:hover .postTitle h3 {
+    text-decoration: underline;
 }
 
 

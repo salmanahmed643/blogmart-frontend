@@ -13,7 +13,7 @@ const SignIn = () => {
         e.preventDefault();
         dispatch({type: "SIGNIN_START"});
         try{
-            const res = await axios.post("http://localhost:7000/api/auth/signin", {
+            const res = await axios.post("https://secure-headland-36866.herokuapp.com/api/auth/signin", {
                 username: userRef.current.value,
                 password: passRef.current.value
             })

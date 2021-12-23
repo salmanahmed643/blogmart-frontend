@@ -12,7 +12,7 @@ const SignUp = () => {
         e.preventDefault();
         setError(false)
         try{
-            const res = await axios.post("http://localhost:7000/api/auth/signup", {
+            const res = await axios.post("https://secure-headland-36866.herokuapp.com/api/auth/signup", {
                 username,
                 email,
                 password

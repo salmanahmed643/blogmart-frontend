@@ -9,7 +9,7 @@ const Sidebar = () => {
 
     useEffect( () => {
         const getCats = async () => {
-            const res = await axios.get("http://localhost:7000/api/categories")
+            const res = await axios.get("https://secure-headland-36866.herokuapp.com/api/categories")
             setCats(res.data);
         }
         getCats()
@@ -59,9 +59,9 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className="socialList">
-                        <a href="/"><i className="fab fa-facebook-f"></i></a>
-                        <a href="/"><i className="fab fa-facebook-f"></i></a>
-                        <a href="/"><i className="fab fa-facebook-f"></i></a>
+                        <a href="/"><i className="facebook fab fa-facebook-f"></i></a>
+                        <a href="/"><i className="instagram fab fa-instagram"></i></a>
+                        <a href="/"><i className="twitter fab fa-twitter"></i></a>
                     </div>
                 </div>
                 {/* sidebar follow end */}

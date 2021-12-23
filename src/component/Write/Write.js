@@ -23,13 +23,13 @@ const Write = () => {
             data.append("file", file);
             newPost.postPhoto = filename;
             try{
-                await axios.post("http://localhost:7000/api/upload", data)
+                await axios.post("https://secure-headland-36866.herokuapp.com/api/upload", data)
             } catch(err) {
 
             }
         }
         try{
-            const res = await axios.post("http://localhost:7000/api/posts", newPost);
+            const res = await axios.post("https://secure-headland-36866.herokuapp.com/api/posts", newPost);
             window.location.replace("/post/" + res.data._id) 
         } catch(err) {
         }

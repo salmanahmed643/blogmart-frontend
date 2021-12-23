@@ -89,17 +89,39 @@
  .socialList {
     margin-top: 1rem;
  }
- .socialList a {
- }
+
  .socialList a i {
-    width: 5rem;
-    height: 5rem;
-    line-height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
     text-align: center;
-    margin-left: .5rem;
-    background-color: #fff;
+    margin-left: 1rem;
     border-radius: 50%;
-    box-shadow: 2px 6px 8px rgba(0, 0, 0, .4);
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, .2);
+    transition: all .4s ease;
+}
+.socialList a i:hover {
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, .3);
+    transform: scale(1.07) translateY(-3px);
+}
+.socialList a .facebook {
+    background-color: #4064AC;
+    color: #fff;
+}
+.socialList a .instagram {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: #fff;
+}
+/* .socialList a .instagram {
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    color: #fff;
+} */
+.socialList a .twitter {
+    background-color: #1C9CEA;
+    color: #fff;
 }
  /* sidebar follow end */
 
